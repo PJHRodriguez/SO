@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Simular el Procesamiento por Lotes</title>
+
+</head>
+<body>
+    <header>
+        <h1>Simular el Procesamiento por Lotes</h1>
+        <p>Alumno: <span>Pablo Jesus Hernandez Rodriguez</span></p>
+        <p>Profesor: <span>Violeta del Rocio</span></p>
+        <p>Materia: <span>Seminario de Solución de Problemas de Sistemas operativos</span></p>
+        <p>Sección: <span>D03</span></p>
+    </header>
+    <div class="Nproceso"> 
+        
+        <form class="formulario" action="">
+            <fieldset>
+                <center><legend>NÚMERO DE PROCESOS:  </legend></center>
+                <label for="procesos">Ingrese los procesos que requiera: </label>
+                <input type="num" id="procesos" required>
+            </fieldset>
+        </form>
+        <center><input class='boton' type="submit" id="ingresar" value="Continuar"></center>
+        <div id="errores" class='alerta'>
+        </div>
+    </div>
+    <div id="proceso" class="Nproceso">
+       
+    </div>
+    <div class="contenedor">
+        <div>
+            <p id="lotePendientes"></p>
+            <!--Lote en Proceso-->
+            <h2>Lote en Proceso</h2>
+            <table class="tabla">
+                <thead>
+                    <th>Lote</th>
+                    <th>ID</th> 
+                    <th>Tiempo Máximo Estimado</th> 
+                </thead>
+                <tbody id="loteProceso">
+                
+                </tbody>
+            </table>
+        </div>
+        <!-- Proceso en Ejecucion -->
+        <div >
+            <h2>Proceso en Ejecución</h2>
+            <div id="procesoEjecucion" class="proceso">
+
+            </div>
+        </div>
+        <div>
+            <h2>Procesos Terminados</h2>
+            <table class="tabla">
+                <thead>
+                    <th>Lote</th>
+                    <th>ID</th>
+                    <th>Operación</th> 
+                    <th>Resultado</th> 
+                </thead>
+                <tbody id="procesoTerminado">
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p id="tiempoTotal" class="ttotal"></p>
+    </footer>
+    <script src="node_modules/advanced-timer/src/main.js"></script>
+    <script src="js/Proceso.js"> </script>
+    <script src="js/index.js"> </script>
+</body>
+</html>
